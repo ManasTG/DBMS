@@ -232,3 +232,4 @@ MariaDB [comp_db]> SELECT ename, deptno
 1 row in set (0.000 sec)
 
 MariaDB [comp_db]>
+yes
