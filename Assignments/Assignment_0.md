@@ -1,3 +1,7 @@
+##Assignment_0
+##01-02-2026
+
+#Creation of comp_db database and emp and dept table with there values inserted
 1.
 
 MariaDB [(none)]> drop database comp_db;
@@ -47,6 +51,17 @@ Query OK, 0 rows affected (0.015 sec)
 
 
 
+MariaDB [comp_db]> DESC dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(2)      | NO   | PRI | NULL    |       |
+| dname  | varchar(15) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+2 rows in set (0.016 sec)
+
+
+
 
 MariaDB [comp_db]> INSERT INTO dept VALUES
     -> (10, 'RESEARCH'),
@@ -84,6 +99,23 @@ MariaDB [comp_db]> CREATE TABLE emp(
     -> deptno INT(2),
     -> FOREIGN KEY (deptno) REFERENCES dept(deptno));
 Query OK, 0 rows affected (0.032 sec)
+
+
+
+MariaDB [comp_db]> DESC emp;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| empno    | int(4)      | NO   | PRI | NULL    |       |
+| ename    | varchar(20) | NO   |     | NULL    |       |
+| job      | varchar(20) | YES  |     | NULL    |       |
+| mgr      | int(4)      | YES  |     | NULL    |       |
+| hiredate | date        | YES  |     | NULL    |       |
+| sal      | int(10)     | YES  |     | NULL    |       |
+| comm     | int(7)      | YES  |     | NULL    |       |
+| deptno   | int(2)      | YES  | MUL | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+8 rows in set (0.018 sec)
 
 
 
