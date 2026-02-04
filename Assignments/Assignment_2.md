@@ -1,17 +1,17 @@
-##Assignment_2
-##31-01-2026
+# Assignment_2
+# 31-01-2026
 
 #Perform Following Query using Employee Table. (Retrieving Data)
-#1. List all distinct job in Employee.
-#2. List all information about employee in Department Number 30.
-#3. Find all department number with department names greater than 20.
-#4. Find all information about all the managers as well as the clerks in department 30.
-#5. List the Employee name, Employee numbers and department of all clerks.
-#6. Find all managers not in department 30.
-#7. List information about all Employees in department 10 who are not manager or clerks.
-#8. Find Employees and jobs earning between 1200 and 1400.
-#9. List Name and Department Number of employee who are clerks, analyst or salesman.
-#10. List Name and Department Number of employee whose names began with M.able.
+## 1. List all distinct job in Employee.
+## 2. List all information about employee in Department Number 30.
+## 3. Find all department number with department names greater than 20.
+## 4. Find all information about all the managers as well as the clerks in department 30.
+## 5. List the Employee name, Employee numbers and department of all clerks.
+## 6. Find all managers not in department 30.
+## 7. List information about all Employees in department 10 who are not manager or clerks.
+## 8. Find Employees and jobs earning between 1200 and 1400.
+## 9. List Name and Department Number of employee who are clerks, analyst or salesman.
+## 10. List Name and Department Number of employee whose names began with M.able.
 
 
 # Performing Queries on EMP Table (Retrieving Data)

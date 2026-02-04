@@ -1,14 +1,14 @@
-##Assignment 1
-##01-02-2026
+# Assignment 1
+# 01-02-2026
 
-#1. Create Employee_master table with data using Employee table.
-#2. Delete all record into Employee_master whose DeptNo is 10
-#3. Update 10% in his salary of DEPTNO 20 into Employee_Master.
-#4. Alter SAL with size 10,2 in Employee_Master.
-#5. Drop Employee_master Table.
+## 1. Create Employee_master table with data using Employee table.
+## 2. Delete all record into Employee_master whose DeptNo is 10
+## 3. Update 10% in his salary of DEPTNO 20 into Employee_Master.
+## 4. Alter SAL with size 10,2 in Employee_Master.
+## 5. Drop Employee_master Table.
 
 
-#1. Create Employee_master table with data using Employee table.
+## 1. Create Employee_master table with data using Employee table.
 
 MariaDB [comp_db]> CREATE TABLE emp_mst SELECT* FROM emp;
 Query OK, 14 rows affected (0.070 sec)
@@ -36,7 +36,7 @@ MariaDB [comp_db]> SELECT* FROM emp_mst;
 14 rows in set (0.000 sec)
 
 
-#2. Delete all record into Employee_master whose DeptNo is 10
+## 2. Delete all record into Employee_master whose DeptNo is 10
 
 MariaDB [comp_db]> DELETE FROM emp_mst
     -> WHERE deptno = 10;
@@ -64,7 +64,7 @@ MariaDB [comp_db]> SELECT* FROM emp_mst;
 
 
 
-#3. Update 10% in his salary of DEPTNO 20 into Employee_Master.
+## 3. Update 10% in his salary of DEPTNO 20 into Employee_Master.
 
 
 MariaDB [comp_db]> UPDATE emp_mst
@@ -96,7 +96,7 @@ MariaDB [comp_db]> SELECT* FROM emp_mst;
 
 
 
-#4. Alter SAL with size 10,2 in Employee_Master.
+## 4. Alter SAL with size 10,2 in Employee_Master.
 
 MariaDB [comp_db]> ALTER TABLE emp_mst
     -> MODIFY SAL DECIMAL(10,2);
@@ -126,7 +126,7 @@ MariaDB [comp_db]> SELECT* FROM emp_mst;
 
 
 
-#5. Drop Employee_master Table.
+## 5. Drop Employee_master Table.
 
 
 MariaDB [comp_db]> DROP TABLE emp_mst;

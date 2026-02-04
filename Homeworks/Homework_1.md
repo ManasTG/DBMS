@@ -1,14 +1,14 @@
-##HOMEWORK_1
-##02-02-2026
+# HOMEWORK_1
+# 02-02-2026
 
-#1. Create a database named iilm.
+## 1. Create a database named iilm.
 #Within this database, create a table called Student with appropriate columns, data types, and constraints.
 #After creating the table, insert 5 records into it.
 #Use the following command to view the tuples of the table.
 
-#SELECT * FROM Student;
+# SELECT * FROM Student;
 
-##Queries start
+## Queries start
 
 MariaDB [(none)]> SHOW DATABASES;
 +--------------------+

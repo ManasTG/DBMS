@@ -1,22 +1,20 @@
-##Assignment 3 
-##31-01-2026
+# Assignment 3 
+# 31-01-2026
 
-#1. List all employees and jobs in Department 30 in descending order by salary.
-#2. List job and Department Number of employees whose name
-are five letters long begin with “A” and end with “N”.
-#3. Display the name of employees whose name start with alphabet S.
-#4. Display the names of employees whose name ends with alphabet S.
-#5. Display the names of employees working in department number 10 or 20 or 40 or employees working as clerks, salesman or analyst.
-#6. Display employee number and names for employees who earn commission.
-#7. Display employee number and total salary(sal+comision) for each employee.
-#8. Display employee number and annual salary for each
-employee.
-#9. Display the names of all employees working as clerks and drawing a salary more than 3,000.
-#10. Display the names of employees who are working as clerk, salesman or analyst and drawing a salary more than 3,000.
+## 1. List all employees and jobs in Department 30 in descending order by salary.
+## 2. List job and Department Number of employees whose name are five letters long begin with “A” and end with “N”.
+## 3. Display the name of employees whose name start with alphabet S.
+## 4. Display the names of employees whose name ends with alphabet S.
+## 5. Display the names of employees working in department number 10 or 20 or 40 or employees working as clerks, salesman or analyst.
+## 6. Display employee number and names for employees who earn commission.
+## 7. Display employee number and total salary(sal+comision) for each employee.
+## 8. Display employee number and annual salary for each employee.
+## 9. Display the names of all employees working as clerks and drawing a salary more than 3,000.
+## 10. Display the names of employees who are working as clerk, salesman or analyst and drawing a salary more than 3,000.
 
 
 
-#1. List all employees and jobs in Department 30 in descending
+## 1. List all employees and jobs in Department 30 in descending
 order by salary.
 
 MariaDB [comp_db]> SELECT ename, job FROM emp
@@ -24,24 +22,25 @@ MariaDB [comp_db]> SELECT ename, job FROM emp
 +--------+-----------+
 | ename  | job       |
 +--------+-----------+
-| SCOTT  | ANALYST   |
 | ALLEN  | SALESMAN  |
 | WARD   | SALESMAN  |
-| JAMES  | CLERK     |
 | MARTIN | SALESMAN  |
 | BLAKE  | MANAGER   |
+| JAMES  | CLERK     |
 | TURNER | SALESMAN  |
 | SMITH  | CLERK     |
+| FORD   | ANALYST   |
 | ADAMS  | CLERK     |
 | KING   | PRESIDENT |
+| SCOTT  | ANALYST   |
 | CLARK  | MANAGER   |
 | JONES  | MANAGER   |
-| FORD   | ANALYST   |
+| MILLER | CLERK     |
 +--------+-----------+
-13 rows in set (0.000 sec)
+14 rows in set (0.000 sec)
 
 
-#2. List job and Department Number of employees whose name
+## 2. List job and Department Number of employees whose name
 are five letters long begin with “A” and end with “N”.
 
 MariaDB [comp_db]> SELECT job, deptno
@@ -55,7 +54,7 @@ MariaDB [comp_db]> SELECT job, deptno
 1 row in set (0.001 sec)
 
 
-#3. Display the name of employees whose name start with
+## 3. Display the name of employees whose name start with
 alphabet S.
 
 MariaDB [comp_db]> SELECT ename FROM emp
@@ -69,7 +68,7 @@ MariaDB [comp_db]> SELECT ename FROM emp
 2 rows in set (0.000 sec)
 
 
-#4. Display the names of employees whose name ends with
+## 4. Display the names of employees whose name ends with
 alphabet S.
 
 MariaDB [comp_db]> SELECT ename FROM emp
@@ -84,28 +83,29 @@ MariaDB [comp_db]> SELECT ename FROM emp
 3 rows in set (0.000 sec)
 
 
-#5. Display the names of employees working in department
+## 5. Display the names of employees working in department
 number 10 or 20 or 40 or employees working as clerks,
 salesman or analyst.
 
 MariaDB [comp_db]> SELECT ename FROM emp
     -> WHERE deptno IN (10,20,40)
     -> OR ename IN ('clerk', 'salesman', 'analyst');
-+-------+
-| ename |
-+-------+
-| SMITH |
-| JONES |
-| CLARK |
-| SCOTT |
-| KING  |
-| ADAMS |
-| FORD  |
-+-------+
-7 rows in set (0.000 sec)
++--------+
+| ename  |
++--------+
+| SMITH  |
+| JONES  |
+| CLARK  |
+| SCOTT  |
+| KING   |
+| ADAMS  |
+| FORD   |
+| MILLER |
++--------+
+8 rows in set (0.000 sec)
 
 
-#6. Display employee number and names for employees who earn
+## 6. Display employee number and names for employees who earn
 commission.
 MariaDB [comp_db]> SELECT empno, ename FROM emp
     -> WHERE comm IS NOT NULL AND comm != 0;
@@ -121,7 +121,7 @@ MariaDB [comp_db]> SELECT empno, ename FROM emp
 
 
 
-#7. Display employee number and total salary for each employee.
+## 7. Display employee number and total salary for each employee.
 MariaDB [comp_db]> SELECT empno, sal + IFNULL(comm, 0)
     -> AS 'SALARY' FROM emp;
 +-------+--------+
@@ -140,18 +140,20 @@ MariaDB [comp_db]> SELECT empno, sal + IFNULL(comm, 0)
 |  7876 |   1100 |
 |  7900 |    950 |
 |  7902 |   3000 |
+|  7934 |   1300 |
 +-------+--------+
-13 rows in set (0.000 sec)
+14 rows in set (0.000 sec)
 
 
 
-#8.Display employee number and annual salary for each
+
+## 8.Display employee number and annual salary for each
 employee.
 
 MariaDB [comp_db]> SELECT empno, sal*12 AS 'ANNUAL SALARY'
     -> FROM emp;
 +-------+---------------+
-| empno | ANNUAL SALARY |
+| empno | annual salary |
 +-------+---------------+
 |  7369 |          9600 |
 |  7499 |         19200 |
@@ -166,12 +168,13 @@ MariaDB [comp_db]> SELECT empno, sal*12 AS 'ANNUAL SALARY'
 |  7876 |         13200 |
 |  7900 |         11400 |
 |  7902 |         36000 |
+|  7934 |         15600 |
 +-------+---------------+
-13 rows in set (0.000 sec)
+14 rows in set (0.000 sec)
 
 
 
-#9. Display the names of all employees working as clerks and
+## 9. Display the names of all employees working as clerks and
 drawing a salary more than 3,000.
 
 MariaDB [comp_db]> SELECT ename from emp
@@ -181,7 +184,7 @@ Empty set (0.000 sec)
 
 
 
-10.
+## 10. Display the names of employees who are working as clerk, salesman or analyst and drawing a salary more than 3,000.
 MariaDB [comp_db]> SELECT ename from emp
     -> WHERE job IN ('clerk', 'salesman', 'analyst')
     -> AND sal > 3000;

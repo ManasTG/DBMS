@@ -1,8 +1,8 @@
-##Assignment_0
-##01-02-2026
+# Assignment_0
+# 01-02-2026
 
-#Creation of comp_db database and emp and dept table with there values inserted
-1.
+## Creation of comp_db database and emp and dept table with there values inserted
+## 1.
 
 MariaDB [(none)]> drop database comp_db;
 Query OK, 3 rows affected (0.035 sec)
@@ -20,7 +20,7 @@ MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 6 rows in set (0.001 sec)
 
-2.
+## 2.
 MariaDB [(none)]> CREATE DATABASE comp_db;
 Query OK, 1 row affected (0.001 sec)
 

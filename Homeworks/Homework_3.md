@@ -1,24 +1,24 @@
-##HOMEWORK_3
-##02-02-2026
+# HOMEWORK_3
+# 02-02-2026
 
-#1. Create a movie Table. 
+## 1. Create a movie Table. 
 
-#2. Input the values given
+## 2. Input the values given
 
-#3. Write the query to display the results of the above table:
-	#a. List business done by the movies showing only MovieID, MovieName and BusinessCost.
-	#b. List the different categories of movies. (USE THE DISTINCT KEYWORD)
-	#c. Find the net profit of each movie showing its ID, Name and Net Profit. (Hint: Net Profit = BusinessCost – ProductionCost) 
-	#d. Make sure that the new column name is labelled as NetProfit. Is this column now a part of the MOVIE relation. If no, then what name is coined for such columns? What can you say about the profit of a movie which has not yet released? Does your query result show profit as zero?
-	#d. List all movies with ProductionCost greater than 80,000 and less than 1,25,000 showing ID, Name and ProductionCost.
-	#e. List all movies which fall in the category of Comedy or Action. 
-	#f. List the movies which have not been released yet.
-
-
+## 3. Write the query to display the results of the above table:
+	### a. List business done by the movies showing only MovieID, MovieName and BusinessCost.
+	### b. List the different categories of movies. (USE THE DISTINCT KEYWORD)
+	### c. Find the net profit of each movie showing its ID, Name and Net Profit. (Hint: Net Profit = BusinessCost – ProductionCost) 
+	### d. Make sure that the new column name is labelled as NetProfit. Is this column now a part of the MOVIE relation. If no, then what name is coined for such columns? What can you say about the profit of a movie which has not yet released? Does your query result show profit as zero?
+	### d. List all movies with ProductionCost greater than 80,000 and less than 1,25,000 showing ID, Name and ProductionCost.
+	### e. List all movies which fall in the category of Comedy or Action. 
+	### f. List the movies which have not been released yet.
 
 
 
-#1. Create a movie Table. 
+
+
+## 1. Create a movie Table. 
 
 
 MariaDB [iilm]> CREATE TABLE movie(
@@ -46,7 +46,7 @@ MariaDB [iilm]> DESC movie;
 
 
 
-#2. Input the values given
+## 2. Input the values given
 
 
 MariaDB [iilm]> INSERT INTO movie VALUES
@@ -80,9 +80,9 @@ MariaDB [iilm]> ALTER TABLE movie CHANGE buissness_cost buisness_cost INt;
 
 
 
-#3. Write the query to display the results of the above table:
+## 3. Write the query to display the results of the above table:
 
-#a. List business done by the movies showing only MovieID, MovieName and BusinessCost.
+### a. List business done by the movies showing only MovieID, MovieName and BusinessCost.
 
 
 +----------+---------------+---------------+
@@ -99,7 +99,7 @@ MariaDB [iilm]> ALTER TABLE movie CHANGE buissness_cost buisness_cost INt;
 
 
 
-#b. List the different categories of movies. (USE THE DISTINCT KEYWORD)
+## b. List the different categories of movies. (USE THE DISTINCT KEYWORD)
 	
 
 
@@ -118,7 +118,7 @@ MariaDB [iilm]> SELECT DISTINCT category FROM movie;
 
 
 
-#c. Find the net profit of each movie showing its ID, Name and Net Profit. (Hint: Net Profit = BusinessCost – ProductionCost) 
+## c. Find the net profit of each movie showing its ID, Name and Net Profit. (Hint: Net Profit = BusinessCost – ProductionCost) 
 
 
 MariaDB [iilm]> UPDATE movie
@@ -166,7 +166,7 @@ MariaDB [iilm]> SELECT* FROM movie;
 
 
 
-#d. List all movies with ProductionCost greater than 80,000 and less than 1,25,000 showing ID, Name and ProductionCost.
+### d. List all movies with ProductionCost greater than 80,000 and less than 1,25,000 showing ID, Name and ProductionCost.
 	
 
 MariaDB [iilm]> SELECT movie_name FROM movie
@@ -183,7 +183,7 @@ MariaDB [iilm]> SELECT movie_name FROM movie
 
 
 
-#e. List all movies which fall in the category of Comedy or Action. 
+### e. List all movies which fall in the category of Comedy or Action. 
 	
 
 MariaDB [iilm]> SELECT movie_name FROM movie
@@ -200,7 +200,7 @@ MariaDB [iilm]> SELECT movie_name FROM movie
 
 
 
-#f. List the movies which have not been released yet.
+### f. List the movies which have not been released yet.
 
 MariaDB [iilm]> SELECT movie_name FROM movie
     -> WHERE release_date IS NULL;

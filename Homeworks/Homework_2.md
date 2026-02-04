@@ -1,26 +1,26 @@
-##HOMEWORK_2
-##02-02-2026
+# HOMEWORK_2
+# 02-02-2026
 
-#1. Create an Student table.. 
+## 1. Create an Student table.. 
 #Done Already in Homework 1
 
-#2. Create Employee Table 
+## 2. Create Employee Table 
 #DOne Already in Assignment 0
 
-#3. Drop/Truncate
+## 3. Drop/Truncate
 #Done Already in Assignment 1
 
-#4. Table Alteration - ALTER Add a column, MODIFY column to store decimal values, RENAME a table
+## 4. Table Alteration - ALTER Add a column, MODIFY column to store decimal values, RENAME a table
 
-#5. Table Removal - Truscate and Drop
-
-
+## 5. Table Removal - Truscate and Drop
 
 
-#4. Table Alteration - ALTER Add a column, MODIFY column to store decimal values, RENAME a table
 
 
-#4.1- ALTER Add a column
+# 4. Table Alteration - ALTER Add a column, MODIFY column to store decimal values, RENAME a table
+
+
+## 4.1- ALTER Add a column
 
 MariaDB [iilm]> ALTER TABLE student
     -> ADD `exists` VARCHAR(5) DEFAULT('yes');
@@ -40,7 +40,7 @@ MariaDB [iilm]> SELECT* FROM student;
 5 rows in set (0.000 sec)
 
 
-#4.2 - MODIFY column to store decimal values
+## 4.2 - MODIFY column to store decimal values
 
 
 MariaDB [iilm]> ALTER TABLE student
@@ -62,7 +62,7 @@ MariaDB [iilm]> SELECT* FROM student;
 
 
 
-#4.3 - RENAME a table
+## 4.3 - RENAME a table
 
 
 MariaDB [iilm]> ALTER TABLE student
@@ -80,9 +80,9 @@ MariaDB [iilm]> SHOW TABLES;
 
 
 
-#5. Table Deletion
+# 5. Table Deletion
 
-#5.1 Truncate
+## 5.1 Truncate
 
 MariaDB [iilm]> CREATE TABLE temp_student
     -> SELECT* FROM student_list;
@@ -94,7 +94,7 @@ Query OK, 0 rows affected (0.033 sec)
 
 
 
-#5.2 - Drop
+## 5.2 - Drop
 
 MariaDB [iilm]> SHOW TABLES;
 +----------------+
