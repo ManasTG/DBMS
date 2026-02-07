@@ -7,7 +7,7 @@
 ## 4. Display the names of employees whose names have second alphabet A in their names.
 ## 5. Display the names of employees who are not working as salesman or clerk or analyst.
 ## 6. Display the name of the employee along with their annual salary (sal*12). The name of the employee earning highest salary should appear first.
-## 7. Display name, sal, hra, pf, da, totalsal for each employee. The output should be in the order of total sal, hra 15% of sal, da 10% of sal, pf 5% of sal. Total salary will be (sal*hra*da)-pf.
+## 7. Display name, sal, hra, pf, da, totalsal for each employee. The output should be in the order of total sal, hra 15% of sal, da 10% of sal, pf 5% of sal. Total salary will be (sal+hra+da)-pf.
 ## 8. Update the salary of each employee by 10% increment who are not eligible for commission.
 ## 9. Display those employees whose salary is more than 3000 after giving 20% increment.
 ## 10. Display those employees whose salary contains atleast 3 digits.
@@ -106,7 +106,7 @@ MariaDB [manas_db]> SELECT ename, job FROM emp
 
 
 ## 6. Display the name of the employee along with their annual salary (sal*12). The name of the employee earning highest salary should appear first.
-
+{We can use 'Annual Salary' in 3rd line rather than sal*12}
 
 
 
@@ -135,7 +135,7 @@ MariaDB [manas_db]> SELECT ename, sal*12 AS 'Annual Salary'
 
 
 
-## 7. Display name, sal, hra, pf, da, totalsal for each employee. The output should be in the order of total sal, hra 15% of sal, da 10% of sal, pf 5% of sal. Total salary will be (sal*hra*da)-pf. [hra - house allowance, ]
+## 7. Display name, sal, hra, pf, da, totalsal for each employee. The output should be in the order of total sal, hra 15% of sal, da 10% of sal, pf 5% of sal. Total salary will be (sal+hra+da)-pf. [hra - house allowance, ]
 
 
 MariaDB [manas_db]> SELECT ename,
@@ -253,7 +253,7 @@ MariaDB [manas_db]> SELECT ename,
 
 
 
-ariaDB [manas_db]> SELECT ename, sal FROM emp
+MariaDB [manas_db]> SELECT ename, sal FROM emp
     -> WHERE LENGTH(sal) > 3;
 +--------+------+
 | ename  | sal  |
