@@ -233,10 +233,10 @@ MariaDB [manas_db]> SELECT UPPER(ename) AS 'Uppercase emp name'
 
 
 
-MariaDB [manas_db]> SELECT LOWER(ename) AS 'Uppercase emp name'
+MariaDB [manas_db]> SELECT LOWER(ename) AS 'Lowercase emp name'
     -> FROM emp;
 +--------------------+
-| Uppercase emp name |
+| Lowercase emp name |
 +--------------------+
 | smith              |
 | allen              |
