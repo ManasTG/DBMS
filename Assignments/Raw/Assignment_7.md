@@ -30,6 +30,7 @@
 
 
 
+
 ## 2. Find the highest and lowest salaries and the difference between of them.
 
 
