@@ -217,3 +217,5 @@ MariaDB [manas_db]> SELECT deptno, SUM(sal) AS 'Total Sal'
 4 rows in set (0.000 sec)
 
 
+
+Name _ Manas
