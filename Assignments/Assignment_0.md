@@ -134,13 +134,4 @@ INSERT INTO emp VALUES
 SELECT * FROM emp;
 ```
 
----
 
-## Summary
-
-- Created database `comp_db`
-- Created table `dept`
-- Inserted 4 department records
-- Created table `emp` with foreign key reference
-- Inserted 14 employee records
-- Verified data using SELECT queries

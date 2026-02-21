@@ -224,30 +224,7 @@ Empty set
 
 ---
 
-## 13. Employees who joined after 15th of the month.
-
-```sql
-SELECT ename, hiredate
-FROM emp
-WHERE DAY(hiredate) > 15;
-```
-
-```
-+--------+------------+
-| ename  | hiredate   |
-+--------+------------+
-| SMITH  | 1980-12-17 |
-| ALLEN  | 1981-02-20 |
-| WARD   | 1981-02-22 |
-| MARTIN | 1981-09-28 |
-| KING   | 1981-11-17 |
-| MILLER | 1982-01-23 |
-+--------+------------+
-```
-
----
-
-## 14. Employees who joined before 15th of the month.
+## 13. Employees who joined before 15th of the month.
 
 ```sql
 SELECT ename, hiredate
@@ -267,6 +244,29 @@ WHERE DAY(hiredate) < 15;
 | ADAMS  | 1983-01-12 |
 | JAMES  | 1981-12-03 |
 | FORD   | 1981-12-03 |
++--------+------------+
+```
+
+---
+
+## 14. Employees who joined after 15th of the month.
+
+```sql
+SELECT ename, hiredate
+FROM emp
+WHERE DAY(hiredate) > 15;
+```
+
+```
++--------+------------+
+| ename  | hiredate   |
++--------+------------+
+| SMITH  | 1980-12-17 |
+| ALLEN  | 1981-02-20 |
+| WARD   | 1981-02-22 |
+| MARTIN | 1981-09-28 |
+| KING   | 1981-11-17 |
+| MILLER | 1982-01-23 |
 +--------+------------+
 ```
 
